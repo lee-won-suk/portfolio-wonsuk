@@ -5,9 +5,9 @@ spring:
     show-sql: true
     hibernate:
       ddl-auto: none
-  properties:
-    hibernate:
-      format_sql: false
+    properties:
+      hibernate:
+        format_sql: false
   # default_batch_fetch_size: 10
   datasource:
     username: root
