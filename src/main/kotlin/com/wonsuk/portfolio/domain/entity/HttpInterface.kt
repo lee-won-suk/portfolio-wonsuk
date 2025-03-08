@@ -11,16 +11,13 @@ class HttpInterface(httpServletRequest: HttpServletRequest) : BaseEnitity() {
     var id: Long? = null
 
     var cookies: String? = httpServletRequest.cookies
-        ?.map { "${it.name}:${it.value}:" }
-        .toString()
-
-    var referer : String? = httpServletRequest.getHeader("referer")
-
+        ?.joinToString(separator = "") { "${it.name}:${it.value}:" }
+    var referer: String? = httpServletRequest.getHeader("referer")
     var localAddr: String? = httpServletRequest.localAddr
-    var remoteAddor:String? = httpServletRequest.remoteAddr
-    var remoteHost:String? = httpServletRequest.remoteHost
-    var requestUri:String? = httpServletRequest.requestURI
-    var userAgent:String? = httpServletRequest.getHeader("user-agent")
+    var remoteAddor: String? = httpServletRequest.remoteAddr
+    var remoteHost: String? = httpServletRequest.remoteHost
+    var requestUri: String? = httpServletRequest.requestURI
+    var userAgent: String? = httpServletRequest.getHeader("user-agent")
 
 
 }
