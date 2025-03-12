@@ -1,4 +1,11 @@
 package com.wonsuk.portfolio.presentation.dto
 
-class AchivementDTO {
-}
+import org.springframework.context.annotation.Description
+
+data class AchivementDTO(
+    val title: String,
+    val description: String,
+    val host: String,
+    val achievedDate: String?,
+
+)
